@@ -82,19 +82,6 @@ def compute(content):
     map, start, end = read_content(content)
     return compute_best_path(map, start, end)[0]
 
-def print_map(map, treated):
-    for i in range(max([element[0] for element in map.keys()]) + 1):
-        line = ''
-        for j in range(max([element[1] for element in map.keys()]) + 1):
-            if (i, j) in treated:
-                line += 'O'
-            else:
-                line += map[(i, j)]
-        print(line)
-
-
-
-
 def compute2(content):
     map, start, end = read_content(content)
     score, path = compute_best_path(map, start, end)
