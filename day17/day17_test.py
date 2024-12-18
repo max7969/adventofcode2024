@@ -1,0 +1,30 @@
+import day17
+import pytest
+
+def test_example_part1():
+    # Open file test and read lines
+    with open('./day17/ressources/test') as f:
+        content = f.readlines()
+        result = day17.compute(content)
+        assert result == "4,6,3,5,6,3,5,2,1,0"
+
+def test_part1():
+    # Open file test and read lines
+    with open('./day17/ressources/input') as f:
+        content = f.readlines()
+        result = day17.compute(content)
+        print(result)
+
+def test_example_part2():
+    # Open file test and read lines
+    with open('./day17/ressources/test2') as f:
+        content = f.readlines()
+        result = day17.compute2(content)
+        assert result == 117440
+
+def test_part2():
+    # Open file test and read lines
+    with open('./day17/ressources/input') as f:
+        content = f.readlines()
+        result = day17.compute2(content)
+        print(result)
